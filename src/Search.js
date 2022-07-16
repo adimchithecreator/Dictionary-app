@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import './Search.css'
 
 export default function Search() {
+    let [keyword, setKeyword] = useState("");
+
+    function Look(event) {
+        event.preventDefault();
+        alert(`Searching for ${keyword} definition`);
+      }
+      function handleKeywordChange(event) {
+        setKeyword(event.target.value);
+      }
+
+
     return(
-        <form>
-            <input type="search" />
+        <div className="Search mt-5">
+        <form onSubmit={Look}>
+            <input type="search" onChange={handleKeywordChange} />
         </form>
+        </div>
     )
 }
