@@ -5,9 +5,14 @@ import axios from "axios";
 export default function Search() {
     let [keyword, setKeyword] = useState("");
 
-    function Look(event) {
+    function wordSearch(event) {
         event.preventDefault();
         alert(`Searching for ${keyword} definition`);
+      
+
+        let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
+      
+      axios.get(apiUrl).then()
       }
       function handleKeywordChange(event) {
         setKeyword(event.target.value);
@@ -16,7 +21,7 @@ export default function Search() {
 
     return(
         <div className="Search mt-5">
-        <form onSubmit={Look}>
+        <form onSubmit={wordSearch}>
             <input type="search" onChange={handleKeywordChange} />
         </form>
         </div>
