@@ -22,7 +22,8 @@ export default function Search() {
     return(
         <div className="Search mt-5">
         <form onSubmit={wordSearch}>
-            <input type="search" onChange={handleKeywordChange} />
+        <input type="search" placeholder="Search for a word" onChange={handleKeywordChange}  class="form-control search-input" />
+            
         </form>
         </div>
     )
