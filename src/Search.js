@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './Search.css'
 import axios from "axios";
 import Results from "./Results";
 
@@ -37,7 +36,8 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
 
         <div className="Search mt-5">
         <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Search for a word" defaultValue={props.defaultKeyword} onChange={handleKeywordChange}  class="form-control search-input" />
+        <input type="search" placeholder="Search for a word" defaultValue={props.defaultKeyword} onChange={handleKeywordChange} 
+        className="px-4 py-2 border-solid border rounded border-slate-500" />
             
         </form>
         <Results results={results} />
