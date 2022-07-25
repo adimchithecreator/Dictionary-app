@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 
 export default function Results(props) {
+  const audio = useRef(new Audio());
+  function play(src) {
+    if (audio.current) {
+      audio.current.src= src
+      audio.current.play()
+    }
+  }
   if (props.results) {
     return (
       <div className="Results">
@@ -11,7 +18,8 @@ export default function Results(props) {
           {props.results.phonetics.map(function (phonetic, index) {
             return (
               <div key={index}>
-                <Phonetic phonetic={phonetic}/>
+                <Phonetic phonetic={phonetic} onClick={()=> play(phonetic.audio)
+                }  />
               </div>
             );
           })}

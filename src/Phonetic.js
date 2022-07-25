@@ -1,14 +1,13 @@
 import React from "react";
-import ReactAudioPlayer from 'react-audio-player';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 
 export default function Phonetic(props) {
    return(
-    <div className="Phonetic">
-        <ReactAudioPlayer
-  src={props.phonetic.audio}
-  autoPlay
-  controls
-/>
+    <div className="Phonetic inline">
+     <div onClick={props.onClick}>
+     <FontAwesomeIcon icon={faVolumeHigh} />
+     </div>
 {props.phonetic.text}
     </div>
    )
