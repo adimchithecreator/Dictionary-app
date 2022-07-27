@@ -35,7 +35,7 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
     return(
 
         <div className="Search mt-5">
-          <section className=" p-5 rounded-lg shadow-white shadow-md bg-white">
+          <section className=" p-10 rounded-lg shadow-white shadow-md bg-white">
        <h1 className=" font-bold text-lg mb-5">What word are you looking for? 👀</h1>
         <form onSubmit={handleSubmit}>
         <input type="search" placeholder="Search for a word" defaultValue={props.defaultKeyword} onChange={handleKeywordChange} 

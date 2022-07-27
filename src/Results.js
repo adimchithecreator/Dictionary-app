@@ -13,7 +13,7 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <section className=" mt-5 p-7 bg-white rounded-lg shadow-md shadow-white">
+        <section className=" mt-5 p-10 bg-white rounded-lg shadow-md shadow-white">
           <h2 className=" text-3xl font-semibold uppercase tracking-[.20em]">{props.results.word}</h2>
           {props.results.phonetics.map(function (phonetic, index) {
             return (
@@ -26,7 +26,7 @@ export default function Results(props) {
         </section>
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <section className=" mt-5 p-5 bg-white rounded-lg shadow-white shadow-md" key={index}>
+            <section className=" mt-5 p-10 bg-white rounded-lg shadow-white shadow-md" key={index}>
               <Meaning meaning={meaning} />
             </section>
           );
