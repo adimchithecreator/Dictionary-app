@@ -42,7 +42,7 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
         className=" w-full px-4 py-2  rounded border  border-slate-500" />
             
         </form>
-        <div className="hints text-sm  mt-3">
+        <div className="hints text-sm text-green-900 font-bold  mt-3">
 suggested words: money, travel, trees, wine, music.
         </div>
         </section>
