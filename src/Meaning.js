@@ -9,16 +9,17 @@ export default function Meaning(props) {
       {props.meaning.definitions.map(function (definition, index) {
         return (
           <div key={index}>
-            <p>
+            <div>
+          <div className=" font-semibold">
              {definition.definition}
-           
+           </div>
           
-             <div className=" italic">
+             <div className=" opacity-70 italic">
               {definition.example}
               </div>
               
-              <Synonyms synonyms={props.synonyms} />
-            </p>
+              <Synonyms synonyms={definition.synonyms} />
+  </div>
           </div>
         );
       })}
