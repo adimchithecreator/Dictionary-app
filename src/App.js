@@ -3,9 +3,9 @@ import Search from './Search';
 
 function App() {
   return (
-    <div className="App container p-7 mt-5">
-      <h1  className=' text-3xl'> What word are you looking for? 👀</h1>
-     <Search />
+    <div className="App container p-7 mt-5 ">
+      <h1  className=' text-3xl text-center'> What word are you looking for? 👀</h1>
+     <Search defaultKeyword= "brave" />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import axios from "axios";
 import Results from "./Results";
 
 export default function Search(props) {
-    let [keyword, setKeyword] = useState("");
+    let [keyword, setKeyword] = useState(props.defaultKeyword);
     let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
 
@@ -35,11 +35,17 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
     return(
 
         <div className="Search mt-5">
+          <section className=" p-5 rounded-2xl shadow-black shadow-md bg-white">
+       
         <form onSubmit={handleSubmit}>
         <input type="search" placeholder="Search for a word" defaultValue={props.defaultKeyword} onChange={handleKeywordChange} 
-        className="px-4 py-2 border-solid border rounded border-slate-500" />
+        className=" w-full px-4 py-2  rounded border  border-slate-500" />
             
         </form>
+        <div className="hints text-sm  mt-3">
+suggested words: money, travel, trees, wine, music.
+        </div>
+        </section>
         <Results results={results} />
         </div>
     );
