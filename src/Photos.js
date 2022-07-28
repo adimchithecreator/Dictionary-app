@@ -3,13 +3,13 @@ import React from "react";
 export default function Photos(props) {
     if (props.photos) {
         return (
-          <section className="Photos">
-            <div className="row">
+          <section className="Photos mt-5 bg-white p-5  rounded-lg" >
+            <div className=" grid grid-cols-3 gap-5">
               {props.photos.map(function (photo, index) {
                 return (
-                  <div className="col-4" key={index}>
+                  <div className="" key={index}>
                     <a href={photo.src.original} target="_blank" rel="noreferrer">
-                      <img src={photo.src.landscape} className="img-fluid" />
+                      <img src={photo.src.landscape} alt={photo.alt}  />
                     </a>
                   </div>
                 );
