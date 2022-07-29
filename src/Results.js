@@ -14,7 +14,7 @@ export default function Results(props) {
     return (
       <div className="Results">
         <section className=" mt-5 grid lg:grid-cols-6 p-10 rounded-lg ">
-          <h2 className=" text-7xl text-white font-semibold uppercase">{props.results.word}</h2>
+          <h2 className=" lg:text-7xl text-white font-semibold uppercase">{props.results.word}</h2>
           {props.results.phonetics.map((phonetic, index)=> {
             return (
               <div key={index} className="lg:col-start-5 lg:col-end-6">
