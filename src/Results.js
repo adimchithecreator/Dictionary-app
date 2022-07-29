@@ -13,20 +13,21 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <section className=" mt-5 p-10 bg-white rounded-lg shadow-md shadow-white">
-          <h2 className=" text-3xl font-semibold uppercase tracking-[.20em]">{props.results.word}</h2>
-          {props.results.phonetics.map(function (phonetic, index) {
+        <section className=" mt-5 grid lg:grid-cols-6 p-10 rounded-lg ">
+          <h2 className=" text-7xl text-white font-semibold uppercase">{props.results.word}</h2>
+          {props.results.phonetics.map((phonetic, index)=> {
             return (
-              <div key={index}>
+              <div key={index} className="lg:col-start-5 lg:col-end-6">
                 <Phonetic phonetic={phonetic} onClick={()=> play(phonetic.audio)
                 }  />
               </div>
             );
           })}
         </section>
+        <div className="my-6 border-[0.7px] border-borderColor  "></div>
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <section className=" mt-5 p-10 bg-white rounded-lg shadow-white shadow-md" key={index}>
+            <section className=" mt-5 p-10" key={index}>
               <Meaning meaning={meaning} />
             </section>
           );

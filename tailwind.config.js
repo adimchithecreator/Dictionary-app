@@ -1,8 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */ 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'borderColor': '#616161',
+        'example': '#4F4F4F',
+      },
+      fontFamily: {
+        TDS: [ 'Tiro Devanagari Sanskrit', 'serif']
+      },
+    },
   },
   plugins: [],
 }

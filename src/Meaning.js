@@ -4,27 +4,32 @@ import Synonyms from "./Synonyms";
 export default function Meaning(props) {
  
   return (
-    <div className="Meaning">
-      <h3 className=" tracking-wider text-green-900 font-semibold mb-3 text-lg">{props.meaning.partOfSpeech}</h3>
+    <div className="Meaning grid lg:grid-cols-3 divide-x divide-borderColor  border rounded border-borderColor">
+  
+      <h3 className="tracking-wider capitalize text-[#A2A2A2] font-semibold p-5 text-lg ">{props.meaning.partOfSpeech}</h3>
+     
+      <ul className="py-5 px-10 col-span-2">
       {props.meaning.definitions.map(function (definition, index) {
         return (
-          <div key={index}>
+          <li key={index} className="">
+            
             <div>
-          <div className=" font-semibold">
+          <div className=" text-xl  text-white ">
              {definition.definition}
            </div>
           
-             <div className=" opacity-70 italic">
+             <div className=" mt-3 text-example italic">
               {definition.example}
               </div>
-              <div className=" capitalize text-green-900">
+          
 
               <Synonyms synonyms={definition.synonyms} />
-              </div>
+            
   </div>
-          </div>
+          </li>
         );
       })}
+      </ul>
     </div>
   );
 }

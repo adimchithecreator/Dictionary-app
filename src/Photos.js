@@ -3,7 +3,7 @@ import React from "react";
 export default function Photos(props) {
     if (props.photos) {
         return (
-          <section className="Photos mt-5 bg-white p-5  rounded-lg" >
+          <section className="Photos mt-5  p-5" >
             <div className=" grid grid-cols-3 gap-5">
               {props.photos.map(function (photo, index) {
                 return (

@@ -49,16 +49,13 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
     return(
 
         <div className="Search mt-5">
-          <section className=" p-10 rounded-lg shadow-white shadow-md bg-white">
-       <h1 className=" font-bold text-lg mb-5">What word are you looking for? 👀</h1>
-        <form onSubmit={handleSubmit}>
+          <section className=" ">
+      <form onSubmit={handleSubmit} className="caret-green-700  appearance-none">
         <input type="search" placeholder="Search for a word" defaultValue={props.defaultKeyword} onChange={handleKeywordChange} 
-        className=" w-full px-4 py-2  rounded border  border-slate-500" />
+        className=" hidden appearance-none caret-green-700" />
             
         </form>
-        <div className="hints text-sm text-green-900 font-bold  mt-3">
-suggested words: money, travel, trees, wine, music.
-        </div>
+       
         </section>
         <Results results={results} />
         <Photos photos={photos} />
