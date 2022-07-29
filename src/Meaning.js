@@ -6,7 +6,7 @@ export default function Meaning(props) {
   return (
     <div className="Meaning grid lg:grid-cols-3 divide-x divide-borderColor  border rounded border-borderColor">
   
-      <h3 className="tracking-wider capitalize text-[#A2A2A2] font-semibold p-5 text-lg ">{props.meaning.partOfSpeech}</h3>
+      <h3 className="tracking-wider capitalize text-nav font-semibold p-5 text-lg ">{props.meaning.partOfSpeech}</h3>
      
       <ul className="py-5 px-10 col-span-2">
       {props.meaning.definitions.map(function (definition, index) {

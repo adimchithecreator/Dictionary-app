@@ -1,11 +1,15 @@
 import Search from './Search';
 
+
 function App() {
   return (
-    <div className="App lg:max-w-[960px] font-TDS  lg:bg-[#141414] lg:border-8 rounded-2xl border-black mx-auto container mt-14">
-   <Search defaultKeyword= "Happy" />
+    <div className="App">
+ 
+    <div className="lg:max-w-[960px] font-TDS mx-auto container mt-14">
+   <Search defaultKeyword= "pole" />
 
-     <footer className=' text-center mt-5 font-bold text-sm text-green-900'> Coded by Adimchi</footer>
+     <footer className=' text-center mt-5 font-bold text-sm'> Coded by Adimchi</footer>
+    </div>
     </div>
   );
 }
