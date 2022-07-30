@@ -69,7 +69,7 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
             </div>
             
         </form>
-        <SocialIcon url="https://github.com/adimchithecreator/Dictionary-app" bgColor="#ffff" className="" network="github" />
+        <SocialIcon url="https://github.com/adimchithecreator/Dictionary-app" bgColor="#ffff" target="_blank"  className="" network="github" />
         </div>
         </div>
         </div>
