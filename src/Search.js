@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
-import { SocialIcon } from 'react-social-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightFromBracket} from '@fortawesome/free-solid-svg-icons'
+
+
 export default function Search(props) {
     let [keyword, setKeyword] = useState(props.defaultKeyword);
     let [results, setResults] = useState(null);
@@ -65,12 +68,16 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
             <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
         </div>
         <input type="search" placeholder="Search for a word" defaultValue={props.defaultKeyword} onChange={handleKeywordChange} 
-        className=" text-gray-900 text-sm rounded-lg  focus:border block w-72 pl-10 p-2.5  bg-borderColor border-gray-600 placeholder-gray-400  " />
+        className=" focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-gray-900 text-sm rounded-lg  focus:border block w-72 pl-10 p-2.5  bg-borderColor border-gray-600 placeholder-gray-400  " />
+         
             </div>
+          <button type="submit" className=" border px-2 p-1 rounded-full text-lg bg-white ml-3">  
+          <FontAwesomeIcon icon={faArrowRightFromBracket}  /> 
+          
+            </button>
             
         </form>
-        <SocialIcon url="https://github.com/adimchithecreator/Dictionary-app" bgColor="#ffff" target="_blank"  className="" network="github" />
-        </div>
+       </div>
         </div>
         </div>
        
