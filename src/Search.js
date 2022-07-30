@@ -52,9 +52,9 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
           
           <section className=" ">
           <div className=" px-4 py-2.5">
-  <div className="container lg:inline-flex flex-wrap  justify-between items-center mx-auto">
+  <div className="container md:inline-flex lg:inline-flex flex-wrap  justify-between items-center mx-auto">
   <a href="https://dictionaryapi.dev/" className="flex items-center" target="_blank" rel="noreferrer" >
-    <span className=" hidden lg:block self-center text-xl font-semibold whitespace-nowrap text-[#F3F3F3]">Dictionary</span>
+    <span className=" hidden md:block lg:block self-center text-xl font-semibold whitespace-nowrap text-[#F3F3F3]">Dictionary</span>
   </a>
   <div className="flex space-x-4 ">
  
@@ -76,7 +76,9 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
        
         </section>
         <Results results={results} />
+   <h2 className=" text-nav text-center text-2xl capitalize" > pictures of {keyword} </h2>
         <Photos photos={photos} />
+       
         </div>
     );
 }
