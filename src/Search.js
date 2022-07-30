@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
-
+import { SocialIcon } from 'react-social-icons';
 export default function Search(props) {
     let [keyword, setKeyword] = useState(props.defaultKeyword);
     let [results, setResults] = useState(null);
@@ -69,7 +69,7 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
             </div>
             
         </form>
-       <a> Github</a>
+        <SocialIcon url="https://github.com/adimchithecreator/Dictionary-app" bgColor="#ffff" className="" network="github" />
         </div>
         </div>
         </div>
