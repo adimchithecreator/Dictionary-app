@@ -4,8 +4,9 @@ export default function Photos(props) {
     if (props.photos) {
         return (
           <section className="Photos mt-5  p-5" >
-            <div className=" grid grid-cols-3 gap-5">
-              {props.photos.map(function (photo, index) {
+            <div className=" grid grid-cols-2 gap-5">
+            
+              {props.photos.map((photo, index)=> {
                 return (
                   <div className="" key={index}>
                     <a href={photo.src.original} target="_blank" rel="noreferrer">

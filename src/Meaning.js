@@ -18,7 +18,7 @@ export default function Meaning(props) {
              {definition.definition}
            </div>
           
-             <div className=" mt-3 text-example italic">
+             <div className=" mt-3 text-lg text-example italic">
               {definition.example}
               </div>
           
